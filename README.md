@@ -27,3 +27,15 @@ C++14 ≈ C++11 + 少量便利特性，没有颠覆性能力
 - lambda 里面可以用 auto 参数
 - 变量模板
 - std::integer_sequence（写模板元编程、序列化偶尔碰到）
+
+# C++17
+在 14 基础上，大量工程上非常舒服的特性，做机器人 / 边缘 AI 开发高频：
+- 结构化绑定 auto [a,b] = func();（读 pair、map、结构体返回值，写 ROS 数据、解析结果巨爽）
+- if constexpr（编译期分支，模板代码、跨平台 SDK、不同硬件适配必备，边缘开发经常用）
+- std::optional<T>：可以表达“有没有值”，代替裸指针判断，ROS 服务返回、AI 推理结果（推理失败 / 成功）非常适合
+- std::variant 类型联合体，替代丑陋的 union
+- 内联变量 inline static（头文件放全局常量，ROS 消息定义、配置常量很常用）
+- 折叠表达式（模板参数包，写通用序列化、工具函数）
+- 类模板参数推导 CTAD：std::vector v{1,2,3} 不用写 vector<int>
+- std::filesystem（文件路径、创建文件夹、读取模型文件！RKNN/TensorRT 加载模型必用）
+

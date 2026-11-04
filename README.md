@@ -18,3 +18,12 @@ A curated collection of awesome C++ resources, libraries, and tools.
 - 没有 std::make_unique
 - 没有结构化绑定、if constexpr、inline 变量
 - 没有 std::optional、std::variant、std::any
+
+# C++14（11 的小补集，增量升级，改动不大，很多中间过渡项目）
+C++14 ≈ C++11 + 少量便利特性，没有颠覆性能力
+## 高频新增：
+- std::make_unique（超级常用！11 只有 make_shared，没有 make_unique）
+- 泛型 lambda：auto f = [](auto x){return x+1;}
+- lambda 里面可以用 auto 参数
+- 变量模板
+- std::integer_sequence（写模板元编程、序列化偶尔碰到）
